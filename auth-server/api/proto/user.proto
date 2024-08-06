@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package api;
+option go_package="./api";
+
+// Define the message for Friend
+message Friend {
+    int32 id = 1;
+    string name = 2;
+}
+
+// Define the main User message
+message User {
+    string id = 1; // Maps to _id in JSON
+    int32 index = 2;
+    string guid = 3;
+    bool is_active = 4; // Renamed to use snake_case
+    string balance = 5;
+    string picture = 6;
+    int32 age = 7;
+    string eye_color = 8; // Renamed to use snake_case
+    string name = 9;
+    string gender = 10;
+    string company = 11;
+    string email = 12;
+    string phone = 13;
+    string address = 14;
+    string about = 15;
+    string registered = 16; // Consider using Timestamp if you need exact time
+    string password =17;
+    double latitude = 18;
+    double longitude = 19;
+    repeated string tags = 20;
+    repeated Friend friends = 21;
+    string greeting = 22;
+    string favorite_fruit = 23; // Renamed to use snake_case
+}
+
+// Define the service
+service UserService {
+    rpc GetUser(UserRequest) returns (User);
+    rpc CreateUser (User) returns(CreateUserResponse);
+    rpc ListUsers (ListUserRequest)returns (ListUserResponse);
+    rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+// Define a request message
+message UserRequest {
+    string user_id = 1;
+}
+message Token {
+    string token = 1;
+}
+message CreateUserResponse {
+    Token token =1;
+    
+}
+message ListUserRequest {
+    
+}
+message ListUserResponse {
+   repeated User users = 1; 
+}
+message DeleteUserRequest {
+    string user_id = 1;
+}
+message DeleteUserResponse {
+    User user = 1;
+}

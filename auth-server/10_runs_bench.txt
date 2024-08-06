@@ -1,0 +1,1 @@
+go test -benchmem -run=^$ -bench ^BenchmarkTokenGeneration$ grpc-auth-app/auth-server/cmd/tests/ -memprofile p.out -gcflags="-m -m"

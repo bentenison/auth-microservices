@@ -1,0 +1,10 @@
+mode: set
+grpc-auth-app/auth-server/pkg/auth/jwt.go:19.43,24.2 1 1
+grpc-auth-app/auth-server/pkg/auth/jwt.go:31.59,44.2 4 1
+grpc-auth-app/auth-server/pkg/auth/jwt.go:46.67,48.100 1 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:48.100,50.3 1 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:51.2,51.16 1 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:51.16,54.3 2 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:55.2,56.9 2 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:56.9,59.3 2 0
+grpc-auth-app/auth-server/pkg/auth/jwt.go:60.2,60.20 1 0
